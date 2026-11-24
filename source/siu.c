@@ -46,14 +46,14 @@ void SIU_Init(void){
 	/* Setup CAN controller pins */
 
 	/* TX - transmitting */
-	// SIU.PCR[...].B.PA = ...;
-	// SIU.PCR[...].B.OBE = ...;
-	// SIU.PCR[...].B.IBE = ...;
+	SIU.PCR[PCR_CAN_TX].B.PA  = 1;	/* select alternate function 1 (CAN0 TX) */
+	SIU.PCR[PCR_CAN_TX].B.OBE = 1;	/* output buffer on - we drive this pin */
+	SIU.PCR[PCR_CAN_TX].B.IBE = 0;	/* input buffer off - we never read it */
 
 	/* RX - receiving */
-	// SIU.PCR[...].B.PA = ...;
-	// SIU.PCR[...].B.OBE = ...;
-	// SIU.PCR[...].B.IBE = ...;
+	SIU.PCR[PCR_CAN_RX].B.PA  = 1;	/* select alternate function 1 (CAN0 RX) */
+	SIU.PCR[PCR_CAN_RX].B.OBE = 0;	/* output buffer off - we never drive this pin */
+	SIU.PCR[PCR_CAN_RX].B.IBE = 1;	/* input buffer on - we read the bus level */
 
 	SIU.PSMI[0].B.PADSEL = 0x1;
 	SIU.PSMI[33].B.PADSEL = 0x1;
