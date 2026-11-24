@@ -16,6 +16,8 @@
 /* PCR number definitions */
 
 /* TO-DO: your task implementations */
+#define	PCR_CAN_TX		16		/* PB0 - FlexCAN_0 TXD (task sheet 4.2.1, pin_muxing.pdf) */
+#define	PCR_CAN_RX		17		/* PB1 - FlexCAN_0 RXD (task sheet 4.1.1, pin_muxing.pdf) */
 
 
 #define	PCR_LED_P		56		/* PD8 */
