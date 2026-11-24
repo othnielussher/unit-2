@@ -16,7 +16,6 @@
 /* PCR number definitions */
 
 /* TO-DO: your task implementations */
-#define	PCR_CAN_RX		17		/* CAN0 RX - PCR number given in Unit 2 task sheet */
 
 
 #define	PCR_LED_P		56		/* PD8 */

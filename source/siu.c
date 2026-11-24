@@ -51,9 +51,9 @@ void SIU_Init(void){
 	// SIU.PCR[...].B.IBE = ...;
 
 	/* RX - receiving */
-	SIU.PCR[PCR_CAN_RX].B.PA  = 1;	/* select alternate function 1 (CAN0 RX) */
-	SIU.PCR[PCR_CAN_RX].B.OBE = 0;	/* output buffer off - we never drive this pin */
-	SIU.PCR[PCR_CAN_RX].B.IBE = 1;	/* input buffer on - we read the bus level */
+	// SIU.PCR[...].B.PA = ...;
+	// SIU.PCR[...].B.OBE = ...;
+	// SIU.PCR[...].B.IBE = ...;
 
 	SIU.PSMI[0].B.PADSEL = 0x1;
 	SIU.PSMI[33].B.PADSEL = 0x1;
